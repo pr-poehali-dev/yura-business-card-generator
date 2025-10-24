@@ -12,13 +12,13 @@ export default function Index() {
     e.preventDefault();
     const id = parseInt(artistId);
     if (id >= 1 && id <= 1000) {
-      navigate(`/artist/${id}`);
+      navigate(`/card/${id}`);
     }
   };
 
   const handleRandom = () => {
     const randomId = Math.floor(Math.random() * 1000) + 1;
-    navigate(`/artist/${randomId}`);
+    navigate(`/card/${randomId}`);
   };
 
   return (
@@ -26,21 +26,21 @@ export default function Index() {
       <div className="max-w-2xl w-full">
         <div className="text-center mb-12 animate-fade-in">
           <div className="inline-block mb-6">
-            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-accent to-secondary shadow-2xl flex items-center justify-center">
-              <Icon name="Music" size={64} className="text-white" />
+            <div className="w-32 h-32 rounded-full bg-gradient-to-br from-blue-500 to-purple-500 shadow-2xl flex items-center justify-center">
+              <Icon name="Contact" size={64} className="text-white" />
             </div>
           </div>
           
           <h1 className="text-6xl font-black mb-4 tracking-tight">
-            Музыкальные визитки
+            Визитки
           </h1>
           
           <p className="text-xl text-gray-400 mb-2">
-            1000 страниц артистов
+            1000 страниц
           </p>
           
           <p className="text-lg text-gray-500">
-            С быстрыми ссылками на все платформы
+            С контактами и ссылками
           </p>
         </div>
 
@@ -48,7 +48,7 @@ export default function Index() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label htmlFor="artistId" className="block text-sm font-semibold mb-2 text-gray-300">
-                Введите номер артиста (1-1000)
+                Введите номер визитки (1-1000)
               </label>
               <Input
                 id="artistId"
@@ -83,16 +83,16 @@ export default function Index() {
           <Button
             onClick={handleRandom}
             variant="outline"
-            className="w-full h-14 text-lg font-bold rounded-xl border-2 border-accent text-accent hover:bg-accent hover:text-white transition-all duration-300 hover:scale-105"
+            className="w-full h-14 text-lg font-bold rounded-xl border-2 border-blue-500 text-blue-500 hover:bg-blue-500 hover:text-white transition-all duration-300 hover:scale-105"
           >
             <Icon name="Shuffle" size={20} className="mr-2" />
-            Случайный артист
+            Случайная визитка
           </Button>
         </div>
 
         <div className="mt-8 grid grid-cols-3 gap-4">
           <Button
-            onClick={() => navigate('/artist/1')}
+            onClick={() => navigate('/card/1')}
             className="h-20 rounded-2xl bg-black/50 hover:bg-black border border-white/20 backdrop-blur transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
@@ -102,7 +102,7 @@ export default function Index() {
           </Button>
 
           <Button
-            onClick={() => navigate('/artist/500')}
+            onClick={() => navigate('/card/500')}
             className="h-20 rounded-2xl bg-black/50 hover:bg-black border border-white/20 backdrop-blur transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
@@ -112,7 +112,7 @@ export default function Index() {
           </Button>
 
           <Button
-            onClick={() => navigate('/artist/1000')}
+            onClick={() => navigate('/card/1000')}
             className="h-20 rounded-2xl bg-black/50 hover:bg-black border border-white/20 backdrop-blur transition-all duration-300 hover:scale-105"
           >
             <div className="text-center">
