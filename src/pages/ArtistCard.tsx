@@ -7,7 +7,7 @@ const artists = [
   {
     id: 1,
     name: 'The Hatters',
-    album: 'Важно',
+    track: 'Важно',
     image: 'https://cdn.poehali.dev/files/4b4097d8-c84b-417c-a3c3-cf2921ec3f6c.jpeg',
     vk: 'https://vk.com/music',
     yandex: 'https://music.yandex.ru',
@@ -17,7 +17,7 @@ const artists = [
 
 const generateArtists = () => {
   const names = ['The Hatters', 'Егор Крид', 'Zivert', 'Монеточка', 'Найтивыход', 'Скриптонит', 'Oxxxymiron', 'Би-2', 'Сплин', 'Кино'];
-  const albums = ['Важно', 'Голос', 'Vinyl #1', 'Раскраски', 'Где', 'Привычка', '2004', 'Нечётный воин', 'Гранатовый альбом', 'Группа крови'];
+  const tracks = ['Важно', 'Голос', 'Vinyl #1', 'Раскраски', 'Где', 'Привычка', '2004', 'Нечётный воин', 'Гранатовый альбом', 'Группа крови'];
   
   const generated = [];
   for (let i = 1; i <= 1000; i++) {
@@ -25,11 +25,11 @@ const generateArtists = () => {
       generated.push(artists[0]);
     } else {
       const nameIndex = Math.floor(Math.random() * names.length);
-      const albumIndex = Math.floor(Math.random() * albums.length);
+      const trackIndex = Math.floor(Math.random() * tracks.length);
       generated.push({
         id: i,
         name: names[nameIndex],
-        album: albums[albumIndex],
+        track: tracks[trackIndex],
         image: 'https://cdn.poehali.dev/files/4b4097d8-c84b-417c-a3c3-cf2921ec3f6c.jpeg',
         vk: 'https://vk.com/music',
         yandex: 'https://music.yandex.ru',
@@ -91,7 +91,7 @@ export default function ArtistCard() {
             </h1>
             
             <p className="text-xl text-muted-foreground mb-8 font-medium">
-              {artist.album}
+              {artist.track}
             </p>
 
             <div className="w-full space-y-3">
