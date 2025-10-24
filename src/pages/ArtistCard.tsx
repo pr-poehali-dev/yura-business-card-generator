@@ -81,9 +81,6 @@ export default function ArtistCard() {
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-3 -right-3 bg-accent text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg transform rotate-12">
-                ВАЖНО
-              </div>
             </div>
 
             <h1 className="text-4xl font-black text-center mb-2 tracking-tight">
